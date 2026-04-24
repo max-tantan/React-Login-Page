@@ -4,12 +4,12 @@ import ChatBox from './components/ChatBox.jsx'
 import './App.css'
 
 const highlights = [
-  'Masuk dan lanjutkan percakapan AI yang terakhir',
-  'Gunakan copilot untuk ide, ringkasan, dan drafting cepat',
+  'Masuk dan lanjutkan percakapan Kuromi AI yang terakhir',
+  'Gunakan Kuromi AI untuk ide, ringkasan, dan drafting cepat',
   'Akses workspace chat dari laptop maupun mobile',
 ]
 
-const typingHeadline = 'Masuk untuk mulai ngobrol dengan AI copilot timmu.'
+const typingHeadline = 'Masuk untuk mulai ngobrol dengan Kuromi AI milikmu.'
 
 function App() {
   const rootRef = useRef(null)
@@ -130,14 +130,14 @@ function App() {
 
       <section className="login-showcase">
         <p className="eyebrow" data-reveal>
-          AI chat access
+          Kuromi AI access
         </p>
         <h1 data-reveal>
           {headlineText}
           <span className="typing-cursor" aria-hidden="true"></span>
         </h1>
         <p className="showcase-copy" data-reveal>
-          Login ini dirancang sebagai pintu masuk ke workspace AI chat untuk
+          Login ini dirancang sebagai pintu masuk ke workspace Kuromi AI untuk
           brainstorming, merapikan ide, dan membalas pertanyaan lebih cepat.
         </p>
 
@@ -158,8 +158,8 @@ function App() {
         <div className="panel-header" data-reveal>
           <span className="brand-mark">AI</span>
           <div>
-            <h2>Enter AI Chat</h2>
-            <p>Masuk untuk membuka ruang percakapan dengan asisten AI kamu.</p>
+            <h2>Enter Kuromi AI</h2>
+            <p>Masuk untuk membuka ruang percakapan dengan Kuromi AI kamu.</p>
           </div>
         </div>
 
@@ -178,6 +178,7 @@ function App() {
               onChange={(event) => setEmail(event.target.value)}
             />
             <small>Gunakan email akun yang ingin dipakai masuk ke AI chat.</small>
+            
           </label>
 
           <label className="field" data-reveal>
@@ -197,13 +198,13 @@ function App() {
                 {showPassword ? 'Sembunyikan' : 'Tampilkan'}
               </button>
             </div>
-            <small>Demo login ini akan langsung membuka halaman AI chat.</small>
+            <small>Demo login ini akan langsung membuka workspace Kuromi AI.</small>
           </label>
 
           <div className="form-row" data-reveal>
             <label className="remember-me">
               <input type="checkbox" defaultChecked />
-              <span>Ingat sesi AI saya</span>
+              <span>Ingat sesi Kuromi AI saya</span>
             </label>
             <a href="/" onClick={(event) => event.preventDefault()}>
               Butuh bantuan akses?
@@ -211,7 +212,7 @@ function App() {
           </div>
 
           <button type="submit" className="submit-button" data-reveal>
-            {isAuthenticating ? 'Membuka AI chat...' : 'Masuk ke AI Chat'}
+            {isAuthenticating ? 'Membuka Kuromi AI...' : 'Masuk ke Kuromi AI'}
           </button>
 
           <div className="divider" data-reveal>
