@@ -1,6 +1,7 @@
 import { animate, createScope, stagger } from 'animejs'
 import { useEffect, useRef, useState } from 'react'
 import ChatBox from './components/ChatBox.jsx'
+import LandingPages from './pages/landingpages.jsx'
 import './App.css'
 
 const highlights = [
@@ -18,6 +19,7 @@ function App() {
   const [headlineText, setHeadlineText] = useState('')
   const [isAuthenticating, setIsAuthenticating] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [showChat, setShowChat] = useState(false)
   const [email, setEmail] = useState('demo@aichat.app')
   const [password, setPassword] = useState('password123')
 
@@ -117,7 +119,10 @@ function App() {
   }
 
   if (isLoggedIn) {
-    return <ChatBox accountEmail={email} />
+    if (showChat) {
+      return <ChatBox accountEmail={email} />
+    }
+    return <LandingPages onEnterChat={() => setShowChat(true)} />
   }
 
   return (

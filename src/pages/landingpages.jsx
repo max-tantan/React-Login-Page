@@ -25,7 +25,7 @@ const features = [
   },
 ]
 
-function LandingPages() {
+function LandingPages({ onEnterChat }) {
   const rootRef = useRef(null)
 
   useEffect(() => {
@@ -108,8 +108,8 @@ function LandingPages() {
           jawaban lebih cepat. Mulai ngobrol sekarang dan rasakan perbedaannya.
         </p>
         <div className="hero-actions" data-reveal>
-          <button className="cta-button primary">Mulai Sekarang</button>
-          <button className="cta-button secondary">Pelajari Lebih Lanjut</button>
+          <button className="cta-button primary" onClick={onEnterChat}>Mulai Sekarang</button>
+          <button className="cta-button secondary" onClick={onEnterChat}>Masuk ke Chat</button>
         </div>
       </section>
 
@@ -136,7 +136,7 @@ function LandingPages() {
             Bergabunglah dengan ribuan pengguna yang sudah merasakan kemudahan
             bekerja dengan Kuromi AI.
           </p>
-          <button className="cta-button primary large">Mulai Gratis</button>
+          <button className="cta-button primary large" onClick={onEnterChat}>Mulai Gratis</button>
         </div>
       </section>
 
