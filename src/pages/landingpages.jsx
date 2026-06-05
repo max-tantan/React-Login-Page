@@ -1,25 +1,26 @@
 import { animate, createScope, stagger } from 'animejs'
 import { useEffect, useRef } from 'react'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import './landingpages.css'
 
 const features = [
   {
-    icon: '⚡',
+    icon: 'bi-lightning-fill',
     title: 'Respon Cepat',
     desc: 'Kuromi AI memberikan jawaban instan untuk pertanyaan apa pun, kapan pun.',
   },
   {
-    icon: '🧠',
+    icon: 'bi-stars',
     title: 'Pintar & Kontekstual',
     desc: 'Memahami konteks percakapanmu dan memberikan solusi yang relevan.',
   },
   {
-    icon: '🔒',
+    icon: 'bi-shield-check',
     title: 'Privasi Terjaga',
     desc: 'Semua percakapan dienkripsi dan tersimpan aman di workspace pribadimu.',
   },
   {
-    icon: '📱',
+    icon: 'bi-phone',
     title: 'Akses Mobile',
     desc: 'Nikmati Kuromi AI di laptop maupun mobile, kapan saja dan di mana saja.',
   },
@@ -121,7 +122,7 @@ function LandingPages({ onEnterChat }) {
         <div className="features-grid">
           {features.map((f) => (
             <article key={f.title} className="feature-card" data-reveal>
-              <span className="feature-icon">{f.icon}</span>
+              <i className={`bi ${f.icon}`}></i>
               <h3>{f.title}</h3>
               <p>{f.desc}</p>
             </article>
@@ -141,7 +142,39 @@ function LandingPages({ onEnterChat }) {
       </section>
 
       <footer className="landing-footer" data-reveal>
-        <p>&copy; 2026 Kuromi AI. All rights reserved.</p>
+        <div className="footer-grid">
+          <div className="footer-col brand-col">
+            <span className="footer-brand-mark">AI</span>
+            <p className="footer-tagline">
+             Kuromi AI — asisten pintar untuk brainstorming, merapikan ide, dan
+              menemukan jawaban lebih cepat.
+            </p>
+          </div>
+          <div className="footer-col">
+            <h4>Produk</h4>
+            <a href="/">Fitur</a>
+            <a href="/">Harga</a>
+            <a href="/">Integrasi</a>
+            <a href="/">Pembaruan</a>
+          </div>
+          <div className="footer-col">
+            <h4>Perusahaan</h4>
+            <a href="/">Tentang</a>
+            <a href="/">Blog</a>
+            <a href="/">Karir</a>
+            <a href="/">Kontak</a>
+          </div>
+          <div className="footer-col">
+            <h4>Dukungan</h4>
+            <a href="/">Pusat Bantuan</a>
+            <a href="/">Dokumentasi</a>
+            <a href="/">Status</a>
+            <a href="/">Privasi</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2026 Kuromi AI. All rights reserved.</p>
+        </div>
       </footer>
     </main>
   )
